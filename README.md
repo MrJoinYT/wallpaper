@@ -16,3 +16,5 @@ You then need to change the numbers to be in this format:
     const latitude = 52.515789;
     const longitude = 13.409378;
     
+This is not required, but you probably will need to change the numbers in assets/js/wpMove.js 
+to fit you resolution. At the moment they will only work on 2x1 1920x1080 Screens.
