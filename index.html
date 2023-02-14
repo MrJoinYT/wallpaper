@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>wallpaper</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body style="overflow: hidden;height: 100%;width: 100%;background: #242464;" onload="loader()">
+    <div class="image"><img id="night1" class="fading image" src="assets/img/pictures/night.png" style="opacity: 1;z-index: -10;width: 4000px;height: 1125px;"><img id="day1" class="fading image" src="assets/img/pictures/day.png" style="z-index: -10;opacity: 1;width: 4000px;height: 1125px;"><img id="night2" class="fading image" src="assets/img/pictures/night-cutout.png" style="opacity: 1;z-index: 10;width: 4000px;height: 1125px;"><img id="day2" class="fading image" src="assets/img/pictures/day-cutout.png" style="opacity: 1;z-index: 10;width: 4000px;height: 1125px;"></div>
+    <div class="overlap" style="width: 100%;margin-top: 260px;text-align: right;">
+        <div class="text-end datetime; overlap textshadow" id="datetime" style="transition: text-shadow 5s, color 128s ease-in-out;position: relative;width: 100%;color: #392227;">
+            <div id="time" class="datetime;">
+                <div class="row">
+                    <div class="col d-flex justify-content-xxl-end" style="margin-right: 238px;z-index: -9;">
+                        <h1 id="hour" class="clock text fadingtext" style="font-size: 99px;text-align: left;width: 107px;z-index: -5;color: rgb(57, 34, 39);">99</h1>
+                        <h1 class="text fadingtext" style="font-size: 99px;font-family: monospace;font-family: Courier New;z-index: -5;color: rgb(57, 34, 39);">:</h1>
+                        <h1 id="minutes" class="clock text fadingtext" style="font-size: 99px;text-align: left;width: 107px;z-index: -5;color: rgb(57, 34, 39);">99</h1>
+                        <h1 class="text fadingtext" style="font-size: 99px;font-family: monospace;font-family: Courier New;z-index: -5;color: rgb(57, 34, 39);">:</h1>
+                        <h1 id="seconds" class="clock text fadingtext" style="font-size: 99px;text-align: left;width: 107px;z-index: -5;color: rgb(57, 34, 39);">99</h1>
+                    </div>
+                </div>
+            </div>
+            <div id="date" class="date ;front" style="z-index: 11;">
+                <div class="row" id="text">
+                    <div class="col" id="text" style="margin-right: 238px;margin-top: 0px;z-index: 11;">
+                        <h1 id="dayname" class="text fadingtext" style="color: rgb(57,34,39);">Wednesday</h1>
+                    </div>
+                </div>
+                <div class="row" style="z-index: 0.5;">
+                    <div class="col d-xxl-flex justify-content-xxl-end" id="text" style="margin-right: 238px;z-index: 11;">
+                        <p id="daynum" class="text fadingtext" style="color: rgb(57, 34, 39);">21</p>
+                        <h1 class="text fadingtext" style="color: rgb(57, 34, 39);">&nbsp;</h1>
+                        <p id="month" class="text fadingtext" style="color: rgb(57, 34, 39);">December</p>
+                        <h1 class="text fadingtext" style="font-size: 20px;color: rgb(57, 34, 39);">&nbsp;</h1>
+                        <p id="year" class="text fadingtext" style="color: rgb(57, 34, 39);">2022</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-xxl-flex justify-content-end align-items-end justify-content-xxl-end" id="buttons" style="position: relative;z-index: 20;text-align: right;color: rgb(168,119,172);width: 100%;margin-top: 67px;margin-bottom: -135px;">
+            <div style="border-radius: 20px;">
+                <div class="col boxtransition" style="margin-right: 227px;background: rgba(49,36,75,0.42);box-shadow: 0px 6px 10px 0px rgba(33,37,41,0.32);transition: 0.3s;"><a class="btn btn-dark selbutton normalbutton" role="button" id="button" onclick="lightOff()"><img class="lighticon" src="assets/img/icons/no-idea-96.png"></a><a class="btn btn-dark selbutton normalbutton" role="button" id="button" onclick="lightDim()"><img class="lighticon" src="assets/img/icons/light-96.png" width="32" height="40"></a><a class="btn btn-dark selbutton normalbutton" role="button" id="button" onclick="lightMax()"><img class="lighticon" src="assets/img/icons/light-on-96.png"></a><a class="btn btn-dark selbutton normalbutton" role="button" id="button" onclick="lightBreathing()"><img class="lighticon" src="assets/img/icons/light-on-96%20filled.png"></a></div>
+            </div>
+        </div>
+        <div class="d-xxl-flex justify-content-end justify-content-xxl-end align-items-xxl-end overlap" id="menu" style="z-index: 20;margin-top: 193px;text-align: right;">
+            <div style="border-radius: 20px;">
+                <div class="row d-xxl-flex align-items-end justify-content-xxl-end">
+                    <div class="col d-inline-flex align-items-center boxtransition" style="transition: 0.3s;background: rgba(100,82,137,0.42);height: 88px;box-shadow: 0px 6px 10px 0px rgba(33,37,41,0.32);margin-right: 236px;">
+                        <div id="switch-container" style="text-align: right;padding-top: 5px;"><label class="form-label switch"><input type="checkbox" id="switch-input"><span class="slider" style="width: 65px;height: 44px;border-color: rgba(255,255,255,0);box-shadow: 0px 9px 17px 3px rgba(0,0,0,0.18);margin-left: 22px;transition: 0.3s;"><img class="day-slider-image" src="assets/img/icons/icons8-sun-32.png" alt="Day slider image" style="width: 26px;padding-right: 6px;"><img class="night-slider-image" src="assets/img/icons/icons8-crescent-moon-32.png" alt="Night slider image" style="width: 26px;padding-left: 6px;"></span></label></div>
+                        <div style="margin-left: 23px;margin-right: 23px;"><input type="checkbox" id="toggleIcon" class="hidden"><label class="form-label shadow d-flex justify-content-center align-items-center selbutton normalbutton toggleact roundedcorn" for="toggleIcon" style="width: 44px;height: 44px;margin-left: 52px;margin-right: 4px;color: rgb(33, 37, 41);margin-top: 5px;transition: 0.3s;"><span class="toggle-icon" style="transition: color 3s, text-color 3s;font-size: 21px;margin-top: -1px;">M</span></label></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/clock.js"></script>
+    <script src="assets/js/light.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/switch.js"></script>
+    <script src="assets/js/wallpaper.js"></script>
+    <script src="assets/js/weather.js"></script>
+    <script src="assets/js/wpMove.js"></script>
+</body>
+
+</html>

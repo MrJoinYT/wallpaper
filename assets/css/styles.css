@@ -1,0 +1,384 @@
+.overlap {
+  width: 100%;
+  position: absolute;
+}
+
+@keyframes fadeout {
+  from {
+    transform: translateY(-50px);
+    opacity: 100%;
+  }
+  to {
+    transform: translateY(-50px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0%;
+    transform: translateY(50px);
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0%;
+    transform: translateY(-50px);
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 100%;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    transform: translateY(0);
+    opacity: 100%;
+  }
+  to {
+    transform: translateY(-50px);
+    opacity: 0%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0%;
+    transform: translateY(50px);
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0%;
+    transform: translateY(50px);
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 100%;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 100%;
+  }
+  to {
+    transform: translateY(-50px);
+    opacity: 0%;
+  }
+}
+
+.fadehideimg {
+  opacity: 0;
+}
+
+.fade {
+  transition: opacity 0.5s;
+}
+
+.fade.hidden {
+  opacity: 0;
+}
+
+.fadeimg.hidden {
+  transition: opacity 0.5s;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.fade {
+  transition: opacity 0.5s;
+}
+
+.fading {
+  transition: opacity 25s;
+}
+
+.fadingtext {
+  transition: color 15s ease-in-out;
+}
+
+.selbutton {
+  background: rgb(84,41,110);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.5s, transform 0.3s;
+}
+
+.lighticon {
+  padding-top: 8px;
+  margin-left: -1px;
+}
+
+.selbutton:hover {
+  transition: transform 0.3s, background-color 0.3s;
+  transform: translateY(-4px);
+  border-radius: 20px;
+  background-color: rgb(224,125,195);
+}
+
+.selbutton:active {
+  background-color: rgb(247,166,161);
+  transform: scale(0.9);
+}
+
+.night {
+  background: rgb(108,88,147);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.5s, transform 0.3s;
+}
+
+.night:active {
+  background-color: rgb(251,206,203);
+  transform: scale(0.9);
+}
+
+.night:hover {
+  background-color: rgb(231,152,208);
+  transform: translateY(-4px);
+  transition: background-color 0.5s, transform 0.3s;
+}
+
+.blackimg {
+  filter: invert(100%);
+}
+
+.normalbutton {
+  width: 55px;
+  height: 55px;
+  margin: 23px;
+  border-radius: 30px;
+}
+
+/* Style the switch container */
+
+#switch-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Style the switch toggle */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Style the switch input */
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Style the switch slider */
+
+.slider {
+  border-radius: 35px;
+  transform: translateY(-3px);
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  align-content: center;
+}
+
+.slider:before {
+  left: 2px;
+  align-self: center;
+  align-content: center;
+  position: absolute;
+  content: "";
+  height: 35px;
+  width: 35px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 35px;
+}
+
+/* Style the icons */
+
+.day-icon, .night-icon {
+  position: absolute;
+  -webkit-transition: .4s;
+  transition: .4s;
+  width: 18px;
+  height: 18px;
+}
+
+.day-icon {
+  display: none;
+}
+
+/* Style the switch when it's checked (day mode) */
+
+input:checked + .slider {
+  background-color: #fdd835;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+input:checked + .slider .day-icon {
+  display: block;
+}
+
+input:checked + .slider .night-icon {
+  display: none;
+}
+
+/* Style the switch when it's not checked (night mode) */
+
+input:not(:checked) + .slider {
+  background-color: #0d47a1;
+}
+
+input:not(:checked) + .slider:before {
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+
+input:not(:checked) + .slider .day-icon {
+  display: none;
+}
+
+input:not(:checked) + .slider .night-icon {
+  display: block;
+}
+
+.slider:hover {
+  background-color: #e07dc3;
+  box-shadow: 0px 9px 17px 3px rgba(0,0,0,0.56);
+  transform: translateY(-6px);
+  border-radius: 15px;
+}
+
+.textshadow-day {
+  transition: text-shadow 5s;
+  text-shadow: 0px 3px 30px;
+}
+
+.textshadow-night {
+  transition: text-shadow 5s;
+  text-shadow: 0px 4px 30px #272264;
+}
+
+/* Style the toggle button */
+
+label[for="toggleIcon"] {
+  cursor: pointer;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #525252;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Style the toggle icon */
+
+.toggle-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 16px;
+  color: #fff;
+}
+
+/* Style the toggle button when it is checked */
+
+input[type="checkbox"]:checked + label {
+  background-color: #ffffff;
+}
+
+input[type="checkbox"]:checked + label .toggle-icon {
+  color: #fff;
+}
+
+.normalbutton:hover {
+  border-radius: 20px;
+}
+
+.toggleact.hover {
+  border-radius: 15px;
+}
+
+.selbutton.normalbutton.toggleact.roundedcorn {
+  border-radius: 29px;
+}
+
+.selbutton.normalbutton.toggleact.roundedcorn:hover {
+  border-radius: 15px;
+}
+
+input:not(:checked):hover + .slider {
+  background-color: #6c5893;
+}
+
+input:checked:hover + .slider {
+  background-color: #f7a6a1;
+}
+
+.boxtransition {
+  border-radius: 27px;
+}
+
+.boxtransition:hover {
+  border-radius: 15px;
+}
+
+.image img {
+}
+
+.image {
+  left: 0px;
+  top: 0px;
+  position: absolute;
+}
+
